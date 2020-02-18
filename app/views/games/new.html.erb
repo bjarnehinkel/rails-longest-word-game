@@ -1,2 +1,14 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<div class="container d-flex flex-column align-items-center justify-content-center">
+  <h1>New Game</h1>
+  <ul class="list-inline">
+    <% @letters.each do |letter|%>
+      <div class="list-inline-item letter-card"><li class="letter"><%= letter %></li></div>
+    <% end %>
+  </ul>
+  <form action="/score" method="post" class="form-inline">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters %>
+    <input type="text" name="word" placeholder="What is the longest word you can find?" class="form-control" id="answer-entry">
+    <input type="submit" class="btn btn-primary ml-2">
+  </form>
+</div>

@@ -1,3 +1,36 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
+}
+
+#answer-entry{
+  width: 295px;
+}
+
+.container{
+  text-align: center;
+  height: 100vh;
+}
+
+.letter{
+  color: white;
+  margin-top: 5px;
+}
+
+.letter-card{
+  background-color: #3498DB;
+  box-shadow: 0 0 5px rgb(120,120,120);
+  height: 35px;
+  width: 35px;
+}
